@@ -373,7 +373,7 @@ const currentRoute = router.pathname;
               </FormControl>
 
               <>
-                <a
+                {/* <a
                   href="https://www.zoom.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -387,7 +387,7 @@ const currentRoute = router.pathname;
                     }}
                   />
                   <span className="videoTexts">Instant Video Call </span>
-                </a>
+                </a> */}
 
                 <a
                   href="https://www.whatsapp.com/"
@@ -491,7 +491,7 @@ const currentRoute = router.pathname;
                 <ListItemButton
                   onClick={() => router.push("/project")}
                 >
-                  <ListItemText primary="Latest Aved Project" />
+                  <ListItemText primary="Our Project" />
                 </ListItemButton>
                 <ListItemButton
                     onClick={() => router.push("/blogs")}

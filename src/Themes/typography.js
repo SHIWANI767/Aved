@@ -79,13 +79,10 @@ export const themeOptions = {
       lineHeight: "34px",
       fontFamily: '"Lato", sans-serif',
       "@media(max-width:1050px)": {
-        fontSize: "16px",
-        lineHeight: "18px",
-      },
-      "@media(max-width:767px)": {
-        fontSize: "18px",
+        fontSize: "14px",
         lineHeight: "25px",
       },
+  
     },
     body1: {
       fontWeight: 400,

@@ -6,6 +6,10 @@ import { useTranslation } from "react-i18next";
 import ProjectSlider from "./ProjectSlider";
 import HomeLayout from "@/layout/HomeLayout";
 import Mainroject from "./Mainroject";
+import PropertyCarousel from "./PropertyCarousel";
+import PropertyTypeDropdown from "./PropertyTypeDropdown";
+import { Container } from "@mui/material";
+
 
 
 const LandingPage = styled("Box")(({ theme }) => ({
@@ -21,8 +25,16 @@ export default function Project() {
   };
   return (
     <LandingPage>
+ 
       <ProjectSlider />
-      <Mainroject />
+           <Container>
+      <PropertyTypeDropdown  />
+
+      <PropertyCarousel />
+        </Container>
+ 
+      {/* <Mainroject /> */}
+    
     </LandingPage>
   );
 }

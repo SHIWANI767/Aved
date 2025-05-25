@@ -1,102 +1,58 @@
-// App.js
-import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import SlickSlider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import ScrollAnimation from "react-animate-on-scroll";
-// Banner Images Data
-const bannerData = {
-  desktop: [
-    {
-      image: "/images/Slider/banner_1.jpg",
-      heading: "Grand Polo Club & Resort  ",
-      description: "Equestrian Opulence, Beyond Imagination.",
-    },
-    {
-      image: "/images/Slider/banner_2.jpg",
-      heading: "Grand Polo Club & Resort",
-      description: "Equestrian Opulence, Beyond Imagination.",
-    },
-    {
-      image: "/images/Slider/banner_1.jpg",
-      heading: "Albero at Dubai Creek Harbour",
-      description: "Unfold a New Life",
-    },
-    {
-      image: "/images/Slider/banner_1.jpg",
-      heading: "Golf Verge at Emaar South",
-      description: "Unfold a New Life",
-    },
-    {
-      image: "/images/Slider/banner_1.jpg",
-      heading: "Albero at Dubai Creek Harbour",
-      description: "Unfold a New Life",
-    },
-    // Add more slides as needed
-  ],
-};
+'use client';
+import React from 'react';
+import { Box, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
 
-// Slider Settings
-const sliderSettings = {
-  arrows: false,
-  dots: true,
-  infinite: true,
-  centerMode: true,
-  centerPadding: "0px",
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  responsive: [
-    {
-      breakpoint: 1300,
-      settings: { slidesToShow: 1 },
-    },
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 1 },
-    },
-    {
-      breakpoint: 768,
-      settings: { slidesToShow: 1 },
-    },
-    {
-      breakpoint: 480,
-      settings: { slidesToShow: 1 },
-    },
-  ],
-};
-
-// Main Component
 const ProjectSlider = () => {
-  const renderSlides = (images) =>
-    images.map(({ image, heading, description }, index) => (
-      <Box className="bannerBox" key={index} sx={{ position: "relative" }}>
-        <img
-          src={image}
-          alt={`Slide ${index + 1}`}
-          className="silderbannerimg"
-          width="1080"
-          height="1920"
-        />
-
-        <Box className="gradientOverlay" />
-
- 
-      </Box>
-    ));
-
   return (
-    <Box
-      className="sliderHomepage"
-      style={{ position: "relative", zIndex: "999" }}
-    >
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <SlickSlider {...sliderSettings}>
-            {renderSlides(bannerData.desktop)}
-          </SlickSlider>
+<Box
+  sx={{
+    width: '100%',
+    background: 'rgb(92, 77, 68)',
+    marginTop: '-100px',
+  }}
+>
+
+      <Grid container spacing={0} alignItems="center">
+        {/* Left Side - Text */}
+        <Grid item xs={12} md={6} sx={{ px: { xs: 3, md: 8 } }} style={{paddingTop:"120px"}}>
+          <Typography
+            variant="h3"
+            component="h1"
+            color="#fff"
+            sx={{
+              fontWeight: 600,
+              mb: 2,
+              fontSize: { xs: '2rem', md: '3.5rem' },
+              lineHeight: 1.2,
+            }}
+          >
+            Aved Real Estate <br /> Luxury Marketplace
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: '1rem',
+              color: '#ffffffad',
+              maxWidth: 500,
+            }}
+          >
+            We are recognized for exceeding client expectations and delivering great results through dedication, ease of process, and extraordinary services to our worldwide clients.
+          </Typography>
+        </Grid>
+
+        {/* Right Side - Image */}
+        <Grid item xs={12} md={6}>
+          <Box sx={{ position: 'relative', width: '100%', height: { xs: 300, md: 500 } }}>
+            <Image
+              src="/images/project/slider3.jpg" // Put your actual image in /public
+              alt="Hero Image"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </Box>
         </Grid>
       </Grid>
     </Box>
