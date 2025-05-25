@@ -4,7 +4,7 @@ import { Box, Button, Typography, Stack, Grid } from "@mui/material";
 const floorPlans = [
   {
     label: "First Floor",
-    image: "/images/project/floor-plan.png",
+    image: "/images/Project/floor-plan.png",
     description: [
       "Consectetur adipiscing elit pellentesque sed elit tempus, consectetur augue vel venenatis neque potenti convallis nulla fringilla tellus dapibus lobortis at molestie tellus quisque molestie.",
       "Consectetur adipiscing elit pellentesque sed elit tempus, consectetur augue vel venenatis neque potenti convallis nulla fringilla tellus dapibus lobortis at molestie tellus quisque molestie.",
@@ -13,13 +13,13 @@ const floorPlans = [
   },
   {
     label: "Second Floor",
-    image: "/images/project/floor-plan.png",
+    image: "/images/Project/floor-plan.png",
     description:
       "Bel elit nec ultrices id lectus sagittis bibendum. Mauris ante nunc eleifend sed consectetur non ultricies molestie tellus dapibus maximus.",
   },
   {
     label: "Third Floor",
-    image: "/images/project/floor-plan.png",
+     image: "/images/Project/floor-plan.png",
     description:
       "Quisque interdum accumsan velit ac pellentesque. Sed in arcu et nulla gravida fringilla. Pellentesque habitant morbi tristique senectus et netus.",
   },

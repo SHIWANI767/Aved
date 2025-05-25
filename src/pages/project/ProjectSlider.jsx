@@ -67,7 +67,7 @@ const ProjectSlider = () => {
             className="rightprojrctImage"
           >
             <Image
-              src="/images/project/slider3.jpg" // Put your actual image in /public
+              src="/images/Project/slider3.jpg" // Put your actual image in /public
               alt="Hero Image"
               layout="fill"
               objectFit="cover"

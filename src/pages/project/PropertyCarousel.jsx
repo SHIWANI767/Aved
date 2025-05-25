@@ -133,7 +133,7 @@ const PropertyCard = ({ property }) => {
   };
 
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={4} style={{cursor: "pointer"}}>
       <Box sx={{ position: "relative", cursor: "pointer" }}>
         <Carousel
           responsive={responsive}
