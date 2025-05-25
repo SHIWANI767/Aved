@@ -13,7 +13,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { useRouter } from "next/navigation";
 const RulesComponent = styled(Box)(({ theme, color = "#f0f0f0" }) => ({
   "& .botmainBox": {
-    marginTop: "30px",
+    marginTop: "70px",
   },
   "& .botheadingText": {
     fontSize: "42px",

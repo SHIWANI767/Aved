@@ -1,21 +1,33 @@
-'use client';
-import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import { Box, Grid, Typography } from "@mui/material";
+import Image from "next/image";
 
 const ProjectSlider = () => {
   return (
-<Box
-  sx={{
-    width: '100%',
-    background: 'rgb(92, 77, 68)',
-    marginTop: '-100px',
-  }}
->
-
+    <Box
+      sx={{
+        width: "100%",
+        background: "rgb(92, 77, 68)",
+        marginTop: "-100px",
+         "@media(max-width:768px)": {
+          marginTop: "-34px",
+        },
+        "@media(max-width:767px)": {
+          marginTop: "-4px",
+        },
+      }}
+    >
       <Grid container spacing={0} alignItems="center">
         {/* Left Side - Text */}
-        <Grid item xs={12} md={6} sx={{ px: { xs: 3, md: 8 } }} style={{paddingTop:"120px"}}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ px: { xs: 3, paddingTop: "100px", md: 8 } }}
+          style={{ paddingTop: "120px" }}
+          className="filtermarket"
+        >
           <Typography
             variant="h3"
             component="h1"
@@ -23,7 +35,7 @@ const ProjectSlider = () => {
             sx={{
               fontWeight: 600,
               mb: 2,
-              fontSize: { xs: '2rem', md: '3.5rem' },
+              fontSize: { xs: "2rem", md: "3.5rem" },
               lineHeight: 1.2,
             }}
           >
@@ -33,18 +45,27 @@ const ProjectSlider = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: '1rem',
-              color: '#ffffffad',
+              fontSize: "1rem",
+              color: "#ffffffad",
               maxWidth: 500,
             }}
           >
-            We are recognized for exceeding client expectations and delivering great results through dedication, ease of process, and extraordinary services to our worldwide clients.
+            We are recognized for exceeding client expectations and delivering
+            great results through dedication, ease of process, and extraordinary
+            services to our worldwide clients.
           </Typography>
         </Grid>
 
         {/* Right Side - Image */}
-        <Grid item xs={12} md={6}>
-          <Box sx={{ position: 'relative', width: '100%', height: { xs: 300, md: 500 } }}>
+        <Grid item xs={12} md={6} className="imageright">
+          <Box
+            sx={{
+              position: "relative",
+              width: "100%",
+              height: { xs: 300, md: 500 },
+            }}
+            className="rightprojrctImage"
+          >
             <Image
               src="/images/project/slider3.jpg" // Put your actual image in /public
               alt="Hero Image"

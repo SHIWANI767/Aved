@@ -46,13 +46,15 @@ const clientData = [
 export default function Client() {
   return (
     <MarquemainBox>
-      <Container className="main-sectionGap">
+      <Box className="main-sectionGap" 
+      style={{background:"#F8F9FB", padding:"50px 0"}}>
+        <Container >
         <Box align="center" className="subSection1">
           <ScrollAnimation animateIn="zoomIn">
             <Typography
               variant="h2"
               style={{ textTransform: "uppercase" }}
-              mt={3}
+             
             >
               Our Partners
             </Typography>
@@ -78,6 +80,8 @@ export default function Client() {
           </Marquee>
         </Box>
       </Container>
+      </Box>
+      
     </MarquemainBox>
   );
 }

@@ -1458,9 +1458,9 @@ input:-webkit-autofill:active {
 }
 
 .react-multiple-carousel__arrow {
-  background: rgba(0, 0, 0, 0.92) !important;
-  min-width: 43px;
-  min-height: 43px;
+  background: rgba(0, 0, 0, 0.45) !important;
+  min-width: 37px;
+  min-height: 37px;
   opacity: 1;
   cursor: pointer;
 }
@@ -2321,7 +2321,7 @@ svg:not(:root) {
 }
 
 .landing-about {
-  margin-top: 150px;
+  margin-top: 190px;
 }
 
 .videoText {
@@ -2359,7 +2359,7 @@ svg:not(:root) {
 }
 
 .main-sectionGap {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .project-post-thumbnail {
@@ -2786,6 +2786,35 @@ svg:not(:root) {
   color: #fff;
 }
 
+.MuiPagination-ul {
+  justify-content: center;
+}
+
+.Mui-selected {
+  background-color: rgb(92, 77, 68) !important;
+  color: #fff;
+}
+
+.rightprojrctImage::after {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  content: "";
+  background: rgba(0, 0, 0, 0.7019607843);
+  z-index: 1;
+}
+
+.fiterproperty {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.3490196078);
+  margin: 8px 0 38px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
 @media (max-width: 1280px) {
   .contentBoxMain {
     align-items: flex-end !important;
@@ -2830,6 +2859,19 @@ svg:not(:root) {
   }
 }
 @media (max-width: 767px) {
+  .filtermarket {
+    padding-top: 100px !important;
+    padding-bottom: 21px;
+  }
+  .main-sectionGap {
+    margin-top: 62px;
+  }
+  .aboutusbanner {
+    padding: 0px;
+  }
+  .imageright {
+    display: none;
+  }
   .aboutfooterSection {
     gap: 20px;
     padding: 20px;

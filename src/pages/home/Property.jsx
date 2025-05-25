@@ -3,13 +3,10 @@ import {
   Box,
   Grid,
   Typography,
-  Button,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
+ 
+  Container,
 } from "@mui/material";
-import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
+
 import ScrollAnimation from "react-animate-on-scroll";
 import Image from "next/image";
 import ConstructionIcon from "@mui/icons-material/Construction";
@@ -44,9 +41,12 @@ export default function Property() {
   };
 
   return (
+
     <Box
-      sx={{ flexGrow: 1, padding: { xs: 2, md: 8 }, backgroundColor: "#fff" }}
+    className="main-sectionGap"
+      sx={{ flexGrow: 1,  backgroundColor: "#fff" }}
     >
+      <Container>
       <Grid container spacing={4} alignItems="center">
         {/* Left Side */}
         <Grid item xs={12} md={6}>
@@ -150,6 +150,7 @@ export default function Property() {
           </ScrollAnimation>
         </Grid>
       </Grid>
+      </Container>
     </Box>
   );
 }

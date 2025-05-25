@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 import {
   Card,
   CardContent,
@@ -9,6 +12,7 @@ import {
   Stack,
   Grid,
   Container,
+  Pagination,
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { IoBedOutline, IoCarOutline } from "react-icons/io5";
@@ -24,8 +28,8 @@ const properties = [
     tags: ["FEATURED", "FOR SALE"],
     images: [
       "/images/Project/pro_2.jpg",
-      "/images/Project/pro_2b.jpg",
-      "/images/Project/pro_2c.jpg"
+      "/images/Project/pro_4.jpg",
+      "/images/Project/pro_3.jpg",
     ],
     beds: 4,
     baths: 2,
@@ -38,7 +42,8 @@ const properties = [
     tags: ["FEATURED", "FOR SALE"],
     images: [
       "/images/Project/pro_4.jpg",
-      "/images/Project/pro_4b.jpg"
+      "/images/Project/pro_2.jpg",
+      "/images/Project/pro_4.jpg",
     ],
     beds: 4,
     baths: 2,
@@ -51,84 +56,103 @@ const properties = [
     tags: ["FEATURED", "FOR RENT"],
     images: [
       "/images/Project/pro_3.jpg",
-      "/images/Project/pro_3b.jpg"
+      "/images/Project/pro_2.jpg",
+      "/images/Project/pro_4.jpg",
     ],
     beds: null,
     baths: null,
     cars: null,
     area: 2350,
   },
+  {
+    title: "Equestrian Villa",
+    price: "$1,599,000",
+    tags: ["FEATURED", "FOR SALE"],
+    images: [
+      "/images/Project/pro_2.jpg",
+      "/images/Project/pro_4.jpg",
+      "/images/Project/pro_3.jpg",
+    ],
+    beds: 4,
+    baths: 2,
+    cars: 1,
+    area: 1200,
+  },
+    {
+    title: "Equestrian Villa",
+    price: "$1,599,000",
+    tags: ["FEATURED", "FOR SALE"],
+    images: [
+      "/images/Project/pro_2.jpg",
+      "/images/Project/pro_4.jpg",
+      "/images/Project/pro_3.jpg",
+    ],
+    beds: 4,
+    baths: 2,
+    cars: 1,
+    area: 1200,
+  },
+  {
+    title: "Renovated Studio",
+    price: "$540,000",
+    tags: ["FEATURED", "FOR SALE"],
+    images: [
+      "/images/Project/pro_4.jpg",
+      "/images/Project/pro_2.jpg",
+      "/images/Project/pro_4.jpg",
+    ],
+    beds: 4,
+    baths: 2,
+    cars: 1,
+    area: 1200,
+  },
 ];
-
 
 // Child component
 const PropertyCard = ({ property }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const router = useRouter();
-  const PrevArrow = ({ onClick }) => (
-    <div
-      style={{
-        position: "absolute",
-        left: 10,
-        top: "50%",
-        zIndex: 1,
-        opacity: currentSlide === 0 ? 0.3 : 1,
-        cursor: currentSlide === 0 ? "default" : "pointer",
-      }}
-      onClick={currentSlide === 0 ? null : onClick}
-    >
-      <ArrowBackIosNewIcon fontSize="small" />
-    </div>
-  );
 
-  const NextArrow = ({ onClick }) => (
-    <div
-      style={{
-        position: "absolute",
-        right: 10,
-        top: "50%",
-        zIndex: 1,
-        opacity: currentSlide === property.images.length - 1 ? 0.3 : 1,
-        cursor:
-          currentSlide === property.images.length - 1 ? "default" : "pointer",
-      }}
-      onClick={currentSlide === property.images.length - 1 ? null : onClick}
-    >
-      <ArrowForwardIosIcon fontSize="small" />
-    </div>
-  );
-
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    beforeChange: (_, next) => setCurrentSlide(next),
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 1,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
   };
 
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <Box
-        sx={{ position: "relative", cursor: "pointer" }}
-       
-      >
-      <Slider {...settings}>
-  {property.images.map((img, i) => (
-    <Box key={i}>
-      <CardMedia
-        component="img"
-        height="320"
-        image={img}
-        alt={`${property.title} image ${i + 1}`}
-        sx={{ width: "100%", objectFit: "cover" }}
-      />
-    </Box>
-  ))}
-</Slider>
-
+      <Box sx={{ position: "relative", cursor: "pointer" }}>
+        <Carousel
+          responsive={responsive}
+          infinite
+          autoPlay={false}
+          autoPlaySpeed={3000}
+        >
+          {property.images.map((img, i) => (
+            <Box key={i}>
+              <CardMedia
+                component="img"
+                height="320"
+                image={img}
+                alt={`${property.title} image ${i + 1}`}
+                sx={{ width: "100%", objectFit: "cover" }}
+              />
+            </Box>
+          ))}
+        </Carousel>
 
         {/* Tags */}
         {property.tags?.map((tag, i) => (
@@ -142,7 +166,7 @@ const PropertyCard = ({ property }) => {
       </Box>
 
       <CardContent
-       onClick={() => router.push(`/property-details`)}
+        onClick={() => router.push(`/property-details`)}
         style={{
           boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
           marginTop: "-4px",
@@ -197,11 +221,17 @@ const PropertyCard = ({ property }) => {
 
 const PropertyCarousel = () => {
   return (
-    <Grid container spacing={3}>
-      {properties.map((property, index) => (
-        <PropertyCard key={index} property={property} />
-      ))}
-    </Grid>
+    <>
+      <Grid container spacing={3}>
+        {properties.map((property, index) => (
+          <PropertyCard key={index} property={property} />
+        ))}
+      </Grid>
+      <Box mt={5} className="dislayCenter">
+         <Pagination count={10} showFirstButton showLastButton />
+      </Box>
+     
+    </>
   );
 };
 

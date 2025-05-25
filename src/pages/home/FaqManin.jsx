@@ -12,6 +12,8 @@ import Accordions from "@/components/Accordions";
 import { useTranslation } from "react-i18next";
 
 const StyledFaqSection = styled(Box)(({ theme }) => ({
+    background:"#F8F9FB",
+  padding:"50px 0 80px",
   "& .descriptionbox": {
     marginBottom: "40px",
   },
@@ -72,7 +74,7 @@ const FaqManin = () => {
 
   return (
     <StyledFaqSection>
-      <Container maxWidth="md" className="custumContainerBox sectiongap-main">
+      <Container maxWidth="md" className="custumContainerBox">
         <Box align="center" className="descriptionbox">
           <ScrollAnimation animateIn="zoomIn" style={{ width: "100%" }}>
             <Typography variant="h2" color="primary" mt={1}>

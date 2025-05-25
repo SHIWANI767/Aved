@@ -5,10 +5,9 @@ import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import ProjectSlider from "./ProjectSlider";
 import HomeLayout from "@/layout/HomeLayout";
-import Mainroject from "./Mainroject";
 import PropertyCarousel from "./PropertyCarousel";
-import PropertyTypeDropdown from "./PropertyTypeDropdown";
 import { Container } from "@mui/material";
+import Filter from "./Filter";
 
 
 
@@ -28,13 +27,10 @@ export default function Project() {
  
       <ProjectSlider />
            <Container>
-      <PropertyTypeDropdown  />
-
+            <Filter />
       <PropertyCarousel />
         </Container>
- 
-      {/* <Mainroject /> */}
-    
+
     </LandingPage>
   );
 }

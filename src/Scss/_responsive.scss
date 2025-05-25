@@ -1,4 +1,7 @@
-@media (max-width: 1439px) {
+@media (max-width: 1539px) {
+  .MuiContainer-root {
+    // max-width: 1450px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -51,6 +54,20 @@
 }
 
 @media (max-width: 767px) {
+  .filtermarket {
+    padding-top: 100px !important;
+    padding-bottom: 21px;
+  }
+
+  .main-sectionGap {
+    margin-top: 62px;
+  }
+  .aboutusbanner {
+    padding: 0px;
+  }
+  .imageright {
+    display: none;
+  }
   .aboutfooterSection {
     gap: 20px;
     padding: 20px;
@@ -136,7 +153,7 @@
   }
   .propert-details {
     padding: 20px;
-}
+  }
 }
 
 @media (max-width: 600px) {
