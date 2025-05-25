@@ -14,7 +14,6 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { Search } from "@mui/icons-material";
 export default function Filter() {
   const [formType, setFormType] = useState("quiry");
   const [inquiry, setInquiry] = useState("");

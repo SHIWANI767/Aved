@@ -2574,8 +2574,8 @@ svg:not(:root) {
 }
 
 .cardBox {
-  width: 31%;
-  height: 500px;
+  width: 100%;
+  height: 336px;
   perspective: 1000px;
 }
 
@@ -2760,7 +2760,7 @@ svg:not(:root) {
   margin-right: 6px;
   width: 45px;
   height: 45px;
-  border: 1px solid #D7D7D7;
+  border: 1px solid #d7d7d7;
   display: inline-block;
   border-radius: 6px;
   line-height: 50px;
@@ -2857,11 +2857,35 @@ svg:not(:root) {
   .menuButton::after {
     display: none;
   }
+  .dropdownWrapper {
+    width: 100%;
+  }
+  .landing-about {
+    margin-top: 90px;
+  }
+  .dropdownContent {
+    width: 87%;
+  }
+  .filterContainer {
+    flex-wrap: wrap;
+  }
+  .dropdownHeader {
+    padding: 15px 15px 0px;
+  }
+  .serchCustom {
+    width: 100%;
+  }
+  .teamGridBox {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 }
 @media (max-width: 767px) {
   .filtermarket {
     padding-top: 100px !important;
     padding-bottom: 21px;
+  }
+  .teamGridBox {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
   .main-sectionGap {
     margin-top: 62px;
@@ -2939,6 +2963,13 @@ svg:not(:root) {
     margin-top: 43px;
   }
   .propert-details {
-    padding: 20px;
+    padding: 13px;
+  }
+  .getText {
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .subSection {
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=main.css.map */

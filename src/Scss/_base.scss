@@ -2967,8 +2967,8 @@ svg:not(:root) {
 }
 
 .cardBox {
-  width: 31%;
-  height: 500px;
+  width: 100%;
+  height: 336px;
   perspective: 1000px;
 }
 .teamGridBox {
@@ -3091,123 +3091,120 @@ svg:not(:root) {
   z-index: 2;
   cursor: pointer;
   color: #fff;
-
 }
 .slick-arrow.slick-disabled {
   opacity: 0.3;
   pointer-events: none;
 }
 
-.ropertiesSlider{
- .MuiSvgIcon-root {
-font-size: 30px !important;
+.ropertiesSlider {
+  .MuiSvgIcon-root {
+    font-size: 30px !important;
     fill: #fff !important;
   }
 }
-.featureText{
+.featureText {
   background: rgb(119, 199, 32);
-    color: rgb(255, 255, 255);
-    padding: 3px 6px;
-    border-radius: 5px;
-    font-size: 13px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
+  color: rgb(255, 255, 255);
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 13px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
-.saleText{
-     right: 20px;
-    background: #5c4d44;
-    color: rgb(255, 255, 255);
-    left: auto;
+.saleText {
+  right: 20px;
+  background: #5c4d44;
+  color: rgb(255, 255, 255);
+  left: auto;
 }
-.propertyprice{
-font-weight: 800;
-    font-size: 20px;
-    color: #5c4d44;
+.propertyprice {
+  font-weight: 800;
+  font-size: 20px;
+  color: #5c4d44;
 }
-.propertyFilter{
+.propertyFilter {
   position: relative;
 }
-.propertyFilter::after{
-      position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #232323;
-    background-color: #d8d8d8;
-    height: 80%;
-    content: "";
-    width: 1px;
+.propertyFilter::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #232323;
+  background-color: #d8d8d8;
+  height: 80%;
+  content: "";
+  width: 1px;
 }
-.filterdrodown{
+.filterdrodown {
   min-width: auto;
 }
-.drodownfiltermenu{
+.drodownfiltermenu {
   width: 15%;
 }
-.drodownfiltermenu{
+.drodownfiltermenu {
   width: 84%;
 }
-.propert-details{
+.propert-details {
   padding: 80px 100px 20px 100px;
 }
 .property-single-info__icon {
-    margin-right: 6px;
-    width: 45px;
-    height: 45px;
-    border: 1px solid #D7D7D7;
-    display: inline-block;
-    border-radius: 6px;
-    line-height: 50px;
-    text-align: center;
-    background: #fff;
+  margin-right: 6px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #d7d7d7;
+  display: inline-block;
+  border-radius: 6px;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
 }
-.thumbbottomIng{
+.thumbbottomIng {
   // .slick-initialized .slick-slide{
   //   width: 156.25px;
   //   margin-right: 25px;
   // }
   width: 95% !important;
 }
-.featuresItem{
- background: #5c4d44;
-    padding: 4px;
-    width: 30px;
-    border-radius: 8px;
-    height: 30px;
-    display: flex
-;
-    justify-content: center;
-    align-items: center;
-  svg{
+.featuresItem {
+  background: #5c4d44;
+  padding: 4px;
+  width: 30px;
+  border-radius: 8px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
     color: #fff;
   }
 }
 
-.MuiPagination-ul{
+.MuiPagination-ul {
   justify-content: center;
 }
 .Mui-selected {
-    background-color: rgb(92, 77, 68) !important;
-    color: #fff;
+  background-color: rgb(92, 77, 68) !important;
+  color: #fff;
 }
-.rightprojrctImage::after{
-position: absolute;
-top: 0;
-width: 100%;
-height: 100%;
-top: 0;
-content: '';
-background: #000000b3;
-z-index: 1;
+.rightprojrctImage::after {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  content: "";
+  background: #000000b3;
+  z-index: 1;
 }
-.fiterproperty{
+.fiterproperty {
   background: #ffffff;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #80808059;
-    margin: 8px 0 38px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #80808059;
+  margin: 8px 0 38px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }

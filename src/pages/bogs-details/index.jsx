@@ -37,6 +37,10 @@ const AboutUSBox = styled("Box")(({ theme }) => ({
   "& .headingBox": {
     // paddingBottom: "150px",
     paddingTop: "150px",
+      [theme.breakpoints.down("sm")]:{
+  paddingBottom: "47px",
+    paddingTop: "113px",
+    },
   },
   "& .TopSection": {
     background: "#fff",
@@ -61,7 +65,7 @@ export default function BlogDetail() {
 
             <Box
               className=" displaySpacebetween"
-              style={{ alignItems: "end" }}
+              style={{ alignItems: "end",flexWrap:"wrap" }}
               pb={5}
             >
               <Box className="displayStart" gap="15px">

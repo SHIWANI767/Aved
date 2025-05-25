@@ -9,6 +9,9 @@ const FantasticPage = styled("Box")(({ theme }) => ({
     textTransform: "uppercase",
     lineHeight: "70px",
     fontWeight: "600",
+    [theme.breakpoints.down("sm")]: {
+      lineHeight: "35px",
+    },
   },
   "& p": {
     // maxWidth: "550px",

@@ -164,7 +164,7 @@ export default function Header() {
 },
 
     menuButton: {
-      backgroundColor: "#003a37",
+      backgroundColor: "#5c4d44",
       color: "white",
       "&:hover": {
         backgroundColor: "rgb(37,130,106) !important",
@@ -423,6 +423,7 @@ const currentRoute = router.pathname;
                 color="#003a37 "
                 edge="end"
                 onClick={handleDrawerToggle}
+                style={{background:"#5c4d44"}}
                 sx={{ display: { md: "none" }, ...styles.menuButton }}
               >
                 <MenuIcon color="white" />

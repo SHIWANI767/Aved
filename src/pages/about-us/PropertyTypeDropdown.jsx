@@ -1,5 +1,13 @@
 // components/PropertyFilterDropdown.js
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  MenuItem,
+  Select,
+  Typography,
+} from "@mui/material";
 import { useState, useRef, useEffect } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"; // import both icons
 
@@ -48,7 +56,8 @@ const PropertyFilterDropdown = () => {
   ];
 
   const moreCommunities = ["Address Residences Zabeel"];
-
+  const [formType, setFormType] = useState("quiry");
+  const [inquiry, setInquiry] = useState("");
   return (
     <Container className="custumSelectBoxmain">
       <Box className="filterContainer">
@@ -178,18 +187,53 @@ const PropertyFilterDropdown = () => {
           {openDropdown === "priceRange" && (
             <div className="dropdownContent">
               <Grid container spacing={2}>
-                {propertyTypes1.map((type, index) => (
-                  <Grid item lg={6} md={6} sm={12} xs={12} key={index}>
-                    <Box className="displayStart" style={{ gap: "10px" }}>
-                      <input
-                        type="checkbox"
-                        className="customCheckbox"
-                        style={{ width: "20px", height: "20px" }}
-                      />
-                      <Typography variant="body1">{type}</Typography>
-                    </Box>
-                  </Grid>
-                ))}
+                <Grid item lg={6} md={6} sm={12} xs={12}>
+                  <Typography variant="body2" mb={0.5} className="menunameText">
+                    {" "}
+                    Min Price (AED)
+                  </Typography>
+                  <Select
+                    fullWidth
+                    value={inquiry}
+                    onChange={(e) => setInquiry(e.target.value)}
+                    displayEmpty
+                    variant="outlined"
+                    placeholder="0"
+                    type="search"
+                  >
+                    <MenuItem value="" disabled>
+                      0
+                    </MenuItem>
+
+                    <MenuItem value="residential">300,0000</MenuItem>
+                    <MenuItem value="commercial">400,0000</MenuItem>
+                    <MenuItem value="other">500,0000</MenuItem>
+                  </Select>
+                </Grid>
+
+                <Grid item lg={6} md={6} sm={12} xs={12}>
+                  <Typography variant="body2" mb={0.5} className="menunameText">
+                    {" "}
+                    Max Price (AED)
+                  </Typography>
+                  <Select
+                    fullWidth
+                    value={inquiry}
+                    onChange={(e) => setInquiry(e.target.value)}
+                    displayEmpty
+                    variant="outlined"
+                    placeholder="0"
+                    type="search"
+                  >
+                    <MenuItem value="" disabled>
+                      100,0000
+                    </MenuItem>
+
+                    <MenuItem value="residential">300,0000</MenuItem>
+                    <MenuItem value="commercial">400,0000</MenuItem>
+                    <MenuItem value="other">500,0000</MenuItem>
+                  </Select>
+                </Grid>
               </Grid>
               <button className="clearButton">Clear Selection</button>
             </div>

@@ -13,7 +13,7 @@ const TeamCard = ({ name, description, image, role }) => {
           <Image src={image} alt={name} fill className="cardImage" />
         </div>
         <div className="cardContent">
-          <Typography variant="h2" fontSize="30px">
+          <Typography variant="h2" fontSize="20px" lineHeight="30px">
             {role}
           </Typography>
           <Typography variant="h6">{name}</Typography>

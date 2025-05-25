@@ -32,7 +32,7 @@ const VisionMissionSection = () => {
               >
                 Our Vision
               </Typography>
-              <Typography variant="h6" color="secondary">
+              <Typography variant="h6" color="secondary" lineHeight="30px">
                 We aim to establish ourselves as one of the leading companies in
                 the real estate development sector in the Middle East and North
                 Africa (MENA) region.
@@ -49,9 +49,9 @@ const VisionMissionSection = () => {
                 
                 sx={{ textTransform: "uppercase", mb: 2 }}
               >
-                Our Vision
+                Our Mission
               </Typography>
-              <Typography variant="h6" >
+              <Typography variant="h6" lineHeight="30px">
                 We aim to establish ourselves as one of the leading companies in
                 the real estate development sector in the Middle East and North
                 Africa (MENA) region.

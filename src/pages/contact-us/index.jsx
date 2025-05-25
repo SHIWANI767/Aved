@@ -46,6 +46,9 @@ const ContactUSBox = styled("Box")(({ theme }) => ({
 
   "& .headingBox": {
     paddingTop: "150px",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "113px",
+    },
   },
 
   "& .TopSection": {
@@ -89,7 +92,7 @@ export default function Contactus() {
 
             <Box
               className=" displaySpacebetween"
-              style={{ alignItems: "end" }}
+              style={{ alignItems: "end", flexWrap: "wrap" }}
               pb={5}
             >
               <Box className="displayStart" gap="15px">
@@ -152,7 +155,9 @@ export default function Contactus() {
               <Box className="gettouchBox">
                 <MdOutlineNotListedLocation />
                 <Typography variant="h2">Location</Typography>
-                <Typography variant="body2">Jeddah | Prince Sultan Rd, AVED Building</Typography>
+                <Typography variant="body2">
+                  Jeddah | Prince Sultan Rd, AVED Building
+                </Typography>
 
                 <Button variant="contained" color="secondary">
                   Visit Us
@@ -162,40 +167,36 @@ export default function Contactus() {
           </Grid>
         </Container>
 
-
         <ContactUs />
 
-        <Box  className="main-sectionGap">
-              <Box
-       
-        sx={{
-          position: "relative",
-          overflow: "hidden",
-          width: "100%",
-          zIndex:"999",
-          paddingTop: "30.25%", // 16:9 aspect ratio
-          borderRadius: 2,
-          boxShadow: 2,
-        }}
-      >
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.142155239503!2d-122.41941558468186!3d37.774929279759225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808b8b8b8b8b%3A0xb8b8b8b8b8b8b8b8!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1617120119817!5m2!1sen!2sus"
-          width="100%"
-          height="100%"
-          style={{
-            border: 0,
-            position: "absolute",
-            top: 0,
-            left: 0,
-          }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </Box>
+        <Box className="main-sectionGap">
+          <Box
+            sx={{
+              position: "relative",
+              overflow: "hidden",
+              width: "100%",
+              zIndex: "999",
+              paddingTop: "30.25%", // 16:9 aspect ratio
+              borderRadius: 2,
+              boxShadow: 2,
+            }}
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.142155239503!2d-122.41941558468186!3d37.774929279759225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808b8b8b8b8b%3A0xb8b8b8b8b8b8b8b8!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1617120119817!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{
+                border: 0,
+                position: "absolute",
+                top: 0,
+                left: 0,
+              }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </Box>
         </Box>
-      
-
       </ContactUSBox>
     </>
   );

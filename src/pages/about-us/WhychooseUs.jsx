@@ -1,5 +1,5 @@
 // pages/index.js
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
 import ScrollAnimation from "react-animate-on-scroll";
 import Image from "next/image";
@@ -61,8 +61,9 @@ export default function WhychooseUs() {
   };
 
   return (
+    <Container className="main-sectionGap">
     <Box
-      sx={{ flexGrow: 1, padding: { xs: 2, md: 8 }, backgroundColor: "#fff" }}
+      sx={{ flexGrow: 1,  backgroundColor: "#fff" }}
     >
       <Grid container spacing={4} alignItems="center">
         {/* Left Side */}
@@ -131,5 +132,6 @@ export default function WhychooseUs() {
         </Grid>
       </Grid>
     </Box>
+    </Container>
   );
 }
