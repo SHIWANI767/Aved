@@ -2972,4 +2972,34 @@ svg:not(:root) {
   .subSection {
     margin-bottom: 20px;
   }
+  .digitalIcon {
+    width: 20px;
+    height: 20px;
+  }
+  .digitalText1 {
+    font-size: 11px !important;
+    font-weight: 400;
+  }
+}
+@media (max-width: 600px) {
+  .centerborderfooter::before {
+    position: absolute;
+    width: 89%;
+    height: 1px;
+    right: 0;
+    top: 106%;
+    left: 30px;
+    content: "";
+    background: rgba(255, 255, 255, 0.2196078431);
+  }
+  .footercopy {
+    margin-top: 32px;
+    padding-top: 19px;
+  }
+  .maifootersection {
+    padding-top: 43px;
+    padding-bottom: 23px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
 }/*# sourceMappingURL=main.css.map */

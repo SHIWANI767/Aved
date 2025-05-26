@@ -88,7 +88,7 @@ export default function WhychooseUs() {
 
           <Grid container spacing={1} mb={4}>
             {features.map((feature, index) => (
-              <Grid item xs={6} key={index}>
+              <Grid item xs={6} sm={6} key={index}>
                 <Box display="flex" alignItems="flex-start" sx={{ mb: 1 }}>
                   <Box className="digitalIcon1 displayCenter" sx={{ mr: 1 }}>
                     {iconMap[feature.icon]}

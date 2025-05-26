@@ -24,7 +24,7 @@ export default function NewFooter() {
         background: "#5c4d44",
         margin: "20px",
       }}
-      className="main-sectionGap"
+      className="main-sectionGap maifootersection"
     >
       <Container maxWidth="lg">
         <Grid container spacing={4}>
@@ -158,7 +158,7 @@ export default function NewFooter() {
         </Grid>
 
         {/* Footer Bottom */}
-        <Box mt={6} pt={3} borderTop="1px solid #eeeeee2b" textAlign="center">
+        <Box mt={6} pt={3} borderTop="1px solid #eeeeee2b" textAlign="center" className="footercopy">
           <Typography variant="body2" color="#fff">
             © 2025 <strong>Aved</strong>. All Rights Reserved.
           </Typography>

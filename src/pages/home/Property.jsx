@@ -90,6 +90,7 @@ export default function Property() {
                   <Typography
                     variant="body2"
                     color="#232323"
+                    className="digitalText1"
                     sx={{ fontWeight: 300, fontSize: "18px" }}
                   >
                     {feature.label}
