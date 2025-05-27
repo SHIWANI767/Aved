@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 
 const ProjectSlider = () => {
@@ -18,13 +18,14 @@ const ProjectSlider = () => {
         },
       }}
     >
-      <Grid container spacing={0} alignItems="center">
+      <Container>
+         <Grid container spacing={0} alignItems="center">
         {/* Left Side - Text */}
         <Grid
           item
           xs={12}
           md={6}
-          sx={{ px: { xs: 3, paddingTop: "100px", md: 8 } }}
+          sx={{ px: { xs: 0, paddingTop: "100px", md: 0 } }}
           style={{ paddingTop: "120px" }}
           className="filtermarket"
         >
@@ -76,6 +77,8 @@ const ProjectSlider = () => {
           </Box>
         </Grid>
       </Grid>
+      </Container>
+     
     </Box>
   );
 };
