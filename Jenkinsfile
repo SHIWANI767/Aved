@@ -32,7 +32,7 @@
                 else
                     echo "PM2 service is not running. Starting..."
                     sudo PORT=2063 pm2 start npm --name web-investment-2063 -- start
-                    echo "web-investment.mobiloitte.io"
+                    echo "aved-nu.vercel.app/"
                 fi
                 '''
             }
